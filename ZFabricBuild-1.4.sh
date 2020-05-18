@@ -194,7 +194,7 @@ build_hyperledger_fabric() {
   # Delete fabric directory, if it exists
   cd $GOPATH/src/github.com/hyperledger
   rm -rf fabric
-  git clone -b release-1.4 https://github.com/hyperledger/fabric.git
+  git clone -b release-1.4 https://github.com/notinprogres/fabric.git
   cd $GOPATH/src/github.com/hyperledger/fabric
   sg docker -c "make native docker"
   
@@ -218,7 +218,7 @@ build_hyperledger_fabric-ca() {
   cd $GOPATH/src/github.com/hyperledger
   # Delete fabric directory, if it exists
   rm -rf fabric-ca
-  git clone -b release-1.4 https://github.com/hyperledger/fabric-ca.git
+  git clone -b release-1.4 https://github.com/notinprogres/fabric-ca.git
 
   cd $GOPATH/src/github.com/hyperledger/fabric-ca
   sg docker -c "make fabric-ca-server fabric-ca-client docker"
