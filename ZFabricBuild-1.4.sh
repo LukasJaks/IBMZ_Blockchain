@@ -183,8 +183,6 @@ build_hyperledger_fabric() {
  # Setup Environment Variables
   export GOPATH=$HOME/git
   export PATH=/opt/go/bin:$PATH
-  
-  sudo chmod -R 777 $HOME/git
 
   echo "Your path is:" + $PATH 
 
@@ -196,7 +194,7 @@ build_hyperledger_fabric() {
   # Delete fabric directory, if it exists
   cd $GOPATH/src/github.com/hyperledger
   rm -rf fabric
-  git clone -b release-1.4 https://github.com/LukasJaks/fabric.git
+  git clone -b release-2.0 https://github.com/LukasJaks/fabric.git
   cd $GOPATH/src/github.com/hyperledger/fabric
   sg docker -c "make native docker"
   
