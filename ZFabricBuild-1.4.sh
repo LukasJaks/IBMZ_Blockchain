@@ -183,6 +183,8 @@ build_hyperledger_fabric() {
  # Setup Environment Variables
   export GOPATH=$HOME/git
   export PATH=/opt/go/bin:$PATH
+  
+  sudo chmod -R 777 $HOME/git
 
   echo "Your path is:" + $PATH 
 
